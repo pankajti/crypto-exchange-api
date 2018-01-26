@@ -15,6 +15,10 @@ def get_price_info(symbol):
     json_resp=json.loads(response.text)
     return(json_resp)
 
+def get_24hour_stats(symbol=None):
+    api= '/api/v1/ticker/24hr' if symbol==None else '/api/v1/ticker/24hr?symbol={}'.format(symbol)
+    response=requests.get(api_call_url_format.format(api))
+    return json.loads(response.text)
 
 
 

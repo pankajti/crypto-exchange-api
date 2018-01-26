@@ -4,11 +4,7 @@ from bittrex_exchange_api.rest.api_caller import get_price as get_bittres_price
 from binance_exchange_api.rest.api_caller import get_price_info as get_binance_price
 
 bittrex_data=pd.read_sql("select * from universe_temp where exchange='bittrex'",engine )
-
 binance_data=pd.read_sql("select * from universe_temp where exchange='binance'",engine )
-
-
-
 
 merged=pd.merge(binance_data,bittrex_data,on=['base_currency','quote_currency'],how='inner')
 
