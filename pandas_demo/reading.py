@@ -17,4 +17,6 @@ print(data.loc[9:25,'admit':'gre'].groupby('gre').sum())
 
 data['new_column']=range(len(data))
 
-print(data)
+data[data['new_column']==2]['']=2362
+d=data.append(data)
+print(d)

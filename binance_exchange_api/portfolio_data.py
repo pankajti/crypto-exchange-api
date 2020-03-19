@@ -28,7 +28,8 @@ def calculate_total_coins(wallet):
             pd.buy_price = price*price_btc
         else:
             pd.buy_price = price*price_eth
-        insert_record(pd)
+        print(pd)
+        #insert_record(pd)
         coins=coins+qty
     return coins
 

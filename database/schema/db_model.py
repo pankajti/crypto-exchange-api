@@ -4,7 +4,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine('postgresql://postgres:postgres@localhost:5432/crypto')
 
-connection = engine.connect()
 
 Base=declarative_base()
 
