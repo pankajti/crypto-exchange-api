@@ -23,7 +23,7 @@ date_suf = dt.datetime.now().strftime('%Y%d%m%H%M')
 
 with open ('/Users/pankaj/dev/git/crypto-exchange-api/result/arbitrage/result_{}.csv'.format(date_suf),'a') as f:
     header='binance_symbol', 'bittrex_symbol', 'binance_price_val', 'bitrex_price_val', 'val_time,price_diff', 'percentage_diff'
-    f.write('{},{},{},{},{},{},{}\n'.format(header))
+    #f.write('{},{},{},{},{},{},{},{}\n'.format(header))
 
     for index,record in merged.iterrows() :
         binance_symbol=record['symbol_x']

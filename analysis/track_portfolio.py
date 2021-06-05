@@ -8,8 +8,6 @@ binance_symbol_eth={'IOSTETH':251.748,'ICXETH':3.38661000}
 price_eth=float(get_price('ETHUSDT')['price'])
 price_btc=float(get_price('BTCUSDT')['price'])
 
-
-
 def calculate_total_coins(wallet):
     coins=0
     for symbol, qty in wallet.items():

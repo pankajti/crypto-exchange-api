@@ -6,9 +6,6 @@ import hmac
 import hashlib
 
 
-
-
-
 def place_new_order():
     api_key = ''
     secret = ''
@@ -30,4 +27,6 @@ def place_new_order():
     json_resp=json.loads(response.text)
     return json_resp
 
-place_new_order()
+result = place_new_order()
+
+print(result)
